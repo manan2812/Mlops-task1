@@ -1,0 +1,11 @@
+This is for the production environment 
+create new job 
+paste the following code in the execute shell
+if sudo docker ps | grep prod_server
+then
+echo "Prod server already running"
+else
+sudo docker run -d -t -i -p 8081:80 -v /prodDir:/usr/local/apache2/htdocs/ --name prod_server httpd
+fi
+sudo cp -r -v -f * /myweb2
+click on the save and apply
