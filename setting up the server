@@ -1,0 +1,6 @@
+create two directories:
+mkdir /web1  
+mkdir /web3
+then run the following commands
+    systemctl start jenkins
+    systemctl start docker
