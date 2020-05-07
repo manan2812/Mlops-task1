@@ -1,0 +1,10 @@
+In jenkins
+First create new job and  paste the following code into execute shell.
+if sudo docker ps | grep test_server
+then
+echo "Test server already running"
+else
+sudo docker run -d -t -i -p 8082:80 -v /testDir:/usr/local/apache2/htdocs/ --name test_server httpd
+fi
+sudo cp -r -v -f * /myweb1
+now just click on the apply and save
